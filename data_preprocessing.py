@@ -52,7 +52,7 @@ for index, row in df.iterrows():
 df_expanded = pd.DataFrame(all_claims)
 
 # Vectorization
-vectorizer = TfidfVectorizer(max_features=2000)
+vectorizer = TfidfVectorizer(max_features=1000)
 tfidf_matrix = vectorizer.fit_transform(df_expanded['Normalized Claim'])
 
 # Save matrix to a file for later use
