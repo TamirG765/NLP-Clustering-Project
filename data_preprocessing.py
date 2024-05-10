@@ -13,6 +13,7 @@ df = pd.read_csv('patent_claims.csv')
 def clean_text(text):
     # Remove numbering like '16.', '2. '
     text = re.sub(r'\b\d+\.\s*', '', text)
+    
     # Remove non-alphabet characters and lower the text
     text = re.sub(r'[^a-zA-Z\s]', '', text, re.I|re.A)
     text = text.lower()
@@ -51,7 +52,7 @@ for index, row in df.iterrows():
 df_expanded = pd.DataFrame(all_claims)
 
 # Vectorization
-vectorizer = TfidfVectorizer(max_features=1000)
+vectorizer = TfidfVectorizer(max_features=2000)
 tfidf_matrix = vectorizer.fit_transform(df_expanded['Normalized Claim'])
 
 # Save matrix to a file for later use
@@ -63,3 +64,5 @@ print("TF-IDF matrix saved successfully to:", matrix_file_path)
 df_file_path = 'processed_patent_claims.csv'
 df_expanded.to_csv(df_file_path, index=False)
 print("DataFrame saved successfully to:", df_file_path)
+
+print('Done data_preprocessing!')

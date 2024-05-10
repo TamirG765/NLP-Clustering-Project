@@ -37,3 +37,5 @@ for url in patent_urls:
 # Convert to DataFrame for better manipulation
 claims_df = pd.DataFrame(list(patent_claims.items()), columns=['Patent URL', 'Claims'])
 claims_df.to_csv('patent_claims.csv', index=False)
+
+print('Done data_fetching!')
