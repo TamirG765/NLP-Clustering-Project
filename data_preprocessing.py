@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
+from scipy.sparse import save_npz
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -22,8 +23,8 @@ def clean_text(text):
 df['cleaned_claims'] = df['Claims'].apply(clean_text)
 
 # Tokenization and normalization
-nltk.download('stopwords')
-nltk.download('wordnet')
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
@@ -38,9 +39,15 @@ df['normalized_claims'] = df['cleaned_claims'].apply(normalize_text)
 vectorizer = TfidfVectorizer(max_features=1000)
 tfidf_matrix = vectorizer.fit_transform(df['normalized_claims'])
 
+# Save matrix to a file for later use
+matrix_file_path = 'tfidf_matrix.npz'
+save_npz(matrix_file_path, tfidf_matrix)
+print("TF-IDF matrix saved successfully to:", matrix_file_path)
+
 # Convert matrix to DataFrame and show example
 tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
-print(tfidf_df.head())
 
 # Save DataFrame to CSV
-df.to_csv('processed_patent_claims.csv', index=False)
+df_file_path = 'processed_patent_claims.csv'
+df.to_csv(df_file_path, index=False)
+print("DataFrame saved successfully to:", df_file_path)
