@@ -1,4 +1,4 @@
-import requests
+import requests, os
 import pandas as pd
 from bs4 import BeautifulSoup # for parsing HTML
 
@@ -46,7 +46,11 @@ for url in patent_urls:
 
 # Convert to DataFrame for better manipulation
 claims_df = pd.DataFrame(list(patent_claims.items()), columns=['Patent URL', 'Claims'])
-claims_df.to_csv('patent_claims.csv', index=False)
 
-# Done printing
-print('Done data_fetching!')
+# Define the path
+folder_path = './data_files'  # Relative path to the folder
+file_name = 'patent_claims.csv'
+full_path = os.path.join(folder_path, file_name)
+
+# Save the DataFrame to CSV
+claims_df.to_csv(full_path, index=False)

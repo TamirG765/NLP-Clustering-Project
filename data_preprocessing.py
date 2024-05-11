@@ -4,10 +4,10 @@ from scipy.sparse import save_npz
 import nltk # for text preprocessing
 from nltk.corpus import stopwords 
 from nltk.stem import WordNetLemmatizer
-import re, ast
+import re, ast, os
 
 # Load data
-df = pd.read_csv('patent_claims.csv')
+df = pd.read_csv('./data_files/patent_claims.csv')
 
 # Basic text cleaning function
 def clean_text(text):
@@ -80,13 +80,14 @@ vectorizer = TfidfVectorizer(max_features=1000) # init a TfidfVectorizer object
 tfidf_matrix = vectorizer.fit_transform(df_processed['Normalized Claim'])
 
 # Save matrix to a npz file - suitable for efficiently storing large sparse matrices
+folder_path = './data_files'
 matrix_file_path = 'tfidf_matrix.npz'
-save_npz(matrix_file_path, tfidf_matrix)
-print("TF-IDF matrix saved successfully to:", matrix_file_path)
+full_path = os.path.join(folder_path, matrix_file_path)
+save_npz(full_path, tfidf_matrix)
+print("TF-IDF matrix saved successfully to:", full_path)
 
 # Save DataFrame to CSV
 df_file_path = 'normalized_patent_claims.csv'
-df_processed.to_csv(df_file_path, index=False)
-print("DataFrame saved successfully to:", df_file_path)
-
-print('Done data_preprocessing!')
+full_path = os.path.join(folder_path, df_file_path)
+df_processed.to_csv(full_path, index=False)
+print("DataFrame saved successfully to:", full_path)
