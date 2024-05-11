@@ -1,6 +1,6 @@
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
+from bs4 import BeautifulSoup # for parsing HTML
 
 # Function to scrape the patent claims
 def scrape_patent_claims(url):
