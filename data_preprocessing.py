@@ -48,7 +48,10 @@ def normalize_text(text):
 # Tokenization and normalization function
 nltk.download('stopwords', quiet=True) # for stopwords
 nltk.download('wordnet', quiet=True) # for lemmatization, exmaple: ran, running -> run
-stop_words = set(stopwords.words('english'))
+
+# Extend the stop word list with custom domain-specific terms
+custom_stop_words = ['said', 'claim', 'wherein', 'comprise', 'include', 'method', 'apparatus', 'second', 'according']
+stop_words = set(stopwords.words('english')).union(custom_stop_words)
 lemmatizer = WordNetLemmatizer()
 
 # Prepare data by processing each claim
