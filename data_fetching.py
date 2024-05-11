@@ -4,6 +4,16 @@ import pandas as pd
 
 # Function to scrape the patent claims
 def scrape_patent_claims(url):
+    """
+    Scrapes the patent claims from a given URL.
+
+    Parameters:
+        url (str): The URL of the webpage containing the patent claims.
+
+    Returns:
+        list: A list of strings representing the text of the patent claims.
+    """
+    
     # Fetch the content from the URL using GET method
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -38,4 +48,5 @@ for url in patent_urls:
 claims_df = pd.DataFrame(list(patent_claims.items()), columns=['Patent URL', 'Claims'])
 claims_df.to_csv('patent_claims.csv', index=False)
 
+# Done printing
 print('Done data_fetching!')
