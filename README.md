@@ -15,12 +15,12 @@ To run this application, you'll need Python (3.12.3) and Conda installed on your
 1. **Clone the Repository**:
     Clone the repository to your local machine using the following command:
     ```bash
-    git clone <https://github.com/TamirG765/home-assignment-ml>
+    git clone https://github.com/TamirG765/home-assignment-ml.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd HomeAssignmentML
+    cd home-assignment-ml
     ```
 
 3. **Create a Virtual Environment**:
@@ -42,7 +42,7 @@ To run this application, you'll need Python (3.12.3) and Conda installed on your
 1. **Navigate to the FastAPI App Directory**:
     Open a terminal window and navigate to the directory where FastAPI app is located:
     ```bash
-    cd HomeAssignmentML/App
+    cd home-assignment-ml/App
     ```
 
 2. **Run the FastAPI Server**:
@@ -56,7 +56,7 @@ This starts the backend server on `http://localhost:8000`.
 3. **Run the Streamlit App**:
     Open **another** terminal window and navigate to the directory where the Streamlit app is located:
     ```bash
-    cd HomeAssignmentML/App
+    cd home-assignment-ml/App
     ```
 
 This will open the Streamlit interface in your default web browser at `http://localhost:8501`.
