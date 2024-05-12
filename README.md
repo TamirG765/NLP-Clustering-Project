@@ -24,11 +24,13 @@ To run this application, you'll need Python installed on your machine. The appli
     ```bash
     conda create -n myenv 
     conda activate myenv
+    ```
 
     * Other option:
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
 4. **Install Dependencies**:
     With your Conda environment activated, install the required Python packages specified in `requirements.txt`:
