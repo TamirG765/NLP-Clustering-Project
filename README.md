@@ -21,6 +21,7 @@ To run this application, you'll need Python installed on your machine. The appli
 
 3. **Create a Virtual Environment**:
     * For conda:
+    ```bash
     conda create -n myenv 
     conda activate myenv
 
