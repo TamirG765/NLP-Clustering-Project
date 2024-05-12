@@ -1,11 +1,11 @@
-# Grouping Patent Claims Texts - Home Assignment
+# Grouping Patent Claims Texts - Home Assignment 🏠
 
-## Introduction
+## Introduction 👋🏼
 This application is designed to analyze and group patent claims into topics, for better understanding of the mobile communications sector.</br>
 It uses advanced text processing techniques to dynamically cluster patent claims based on user input regarding the desired number of groups.</br>
 The backend is built with FastAPI and integrates with a Streamlit frontend for a user-friendly experience.
 
-## Getting Started
+## Getting Started 🐍
 
 ### Prerequisites
 To run this application, you'll need Python (3.12.3) and Conda installed on your machine.
@@ -36,7 +36,7 @@ To run this application, you'll need Python (3.12.3) and Conda installed on your
     pip install -r requirements.txt
     ```
 
-## Running the Application
+## Running the Application 🏃
 **Note:** Make sure that the virtual environment remains activated while running the application.
 
 1. **Navigate to the FastAPI App Directory**:
