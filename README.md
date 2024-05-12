@@ -1,12 +1,14 @@
 # Grouping Patent Claims Texts - Home Assignment
 
 ## Introduction
-This application is designed to analyze and group patent claims into topics, for better understanding of the mobile communications sector. It uses advanced text processing techniques to dynamically cluster patent claims based on user input regarding the desired number of groups. The backend is built with FastAPI and integrates with a Streamlit frontend for a user-friendly experience.
+This application is designed to analyze and group patent claims into topics, for better understanding of the mobile communications sector.</br>
+It uses advanced text processing techniques to dynamically cluster patent claims based on user input regarding the desired number of groups.</br>
+The backend is built with FastAPI and integrates with a Streamlit frontend for a user-friendly experience.
 
 ## Getting Started
 
 ### Prerequisites
-To run this application, you'll need Python (3.12.3) and Conda (optional) installed on your machine.
+To run this application, you'll need Python (3.12.3) and Conda installed on your machine.
 
 ### Setup Environment
 
@@ -35,7 +37,7 @@ To run this application, you'll need Python (3.12.3) and Conda (optional) instal
     ```
 
 ## Running the Application
-**Note:** Ensure that the virtual environment remains activated while running the application.
+**Note:** Make sure that the virtual environment remains activated while running the application.
 
 1. **Navigate to the FastAPI App Directory**:
     Open a terminal window and navigate to the directory where FastAPI app is located:
@@ -51,7 +53,7 @@ To run this application, you'll need Python (3.12.3) and Conda (optional) instal
 
 This starts the backend server on `http://localhost:8000`.
 
-3. **Run the Streamlit App**
+3. **Run the Streamlit App**:
     Open **another** terminal window and navigate to the directory where the Streamlit app is located:
     ```bash
     cd HomeAssignmentML/App
