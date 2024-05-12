@@ -48,7 +48,7 @@ To run this application, you'll need Python (3.12.3) and Conda installed on your
 2. **Run the FastAPI Server**:
     Start the server using uvicorn with the following command:
     ```bash
-    uvicorn fast_app:app --reload
+    uvicorn fastapi_app:app --reload
     ```
 
 This starts the backend server on `http://localhost:8000`.
@@ -59,4 +59,11 @@ This starts the backend server on `http://localhost:8000`.
     cd home-assignment-ml/App
     ```
 
+    After that run the following command:
+    ```bash
+    streamlit run streamlit_app.py
+    ```
+
 This will open the Streamlit interface in your default web browser at `http://localhost:8501`.
+
+**Important** - Make sure in both terminals the conda env remains activated!
