@@ -5,7 +5,7 @@ import requests
 
 # Streamlit title
 st.title('Mobile Communication Analysis')
-st.write('This application let users s pick how many groups they want and show the names and number of claims in each group.')
+st.write('This application let users to pick how many groups they want and show the names and number of claims in each group.')
 
 # User input for the number of groups
 groups = st.number_input('Enter the number of groups:', min_value=2, max_value=10, value=2, step=1)
