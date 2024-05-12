@@ -92,6 +92,7 @@ safetensors==0.4.3
 scikit-learn==1.4.2
 scipy==1.13.0
 seaborn==0.13.2
+sentence-transformers==2.7.0
 setuptools==69.5.1
 shellingham==1.5.4
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
@@ -127,4 +128,5 @@ wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_170473120541
 websockets==12.0
 wheel==0.43.0
 wrapt==1.16.0
+yellowbrick==1.5
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1695255097490/work
