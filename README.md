@@ -6,7 +6,7 @@ This application is designed to analyze and group patent claims into topics, enh
 ## Getting Started
 
 ### Prerequisites
-To run this application, you'll need Python installed on your machine. The application was developed using Python 3.8, and compatibility with other versions is not guaranteed.
+To run this application, you'll need Python installed on your machine.
 
 ### Setup Environment
 
@@ -37,3 +37,27 @@ To run this application, you'll need Python installed on your machine. The appli
     ```bash
     pip install -r requirements.txt
 
+## Running the Application
+__Note: the env should stay activated!__
+
+1. **Navigate to the FastAPI App Directory**:
+   Open a terminal window and navigate to the directory where FastAPI app is located:
+   ```bash
+   cd HomeAssignmentML/App
+   ```
+
+2. **Run the FastAPI Server**:
+    Start the server using uvicorn with the following command:
+    ```bash
+    uvicorn fast_app:app --reload
+    ```
+
+This starts the backend server on `http://localhost:8000`.
+Note: Ensure this matches the URL configured in your Streamlit app.
+
+3. **Run the Streamlit App**
+    Open another terminal window and navigate to the directory where the Streamlit app is located:
+    ```bash
+    cd HomeAssignmentML/App
+    ```
+This will open the Streamlit interface in your default web browser, typically accessible at `http://localhost:8501`.
