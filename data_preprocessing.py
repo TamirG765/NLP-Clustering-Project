@@ -61,6 +61,7 @@ for index, row in df.iterrows():
     try:
         claims = ast.literal_eval(row['Claims']) # safely evaluates an expression node or a string containing a Python literal
     except ValueError:
+        
         # Fallback if the conversion fails
         claims = [row['Claims']]
     
