@@ -7,7 +7,7 @@ The backend is built with FastAPI and integrates with a Streamlit frontend for a
 
 ## Getting Started 🐍
 
-### Prerequisites
+### Essentials
 To run this application, you'll need Python (3.12.3) and Conda installed on your machine.
 
 ### Setup Environment
