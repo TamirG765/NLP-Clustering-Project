@@ -65,6 +65,7 @@ for index, row in df.iterrows():
         # Fallback if the conversion fails
         claims = [row['Claims']]
     
+    # claims is now a list of strings and not a single string
     for claim in claims:
         cleaned_claim = clean_text(claim)
         normalized_claim = normalize_text(cleaned_claim)
