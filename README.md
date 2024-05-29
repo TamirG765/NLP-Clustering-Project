@@ -1,4 +1,4 @@
-# Grouping Patent Claims Texts - Home Assignment 🏠
+# Grouping Patent Claims Texts 📜
 
 ## Introduction 👋🏼
 This application is designed to analyze and group patent claims into topics, for better understanding of the mobile communications sector.</br>
